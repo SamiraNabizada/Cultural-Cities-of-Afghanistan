@@ -1,0 +1,332 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e4eccf;
+
+}
+.logo {
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+    height: 50px;
+}
+        .image-container {
+            position: relative;
+            text-align: center;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .image-container .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+header{
+  background-color:#066411;
+  color: #fff;
+  padding: 2px;
+  text-align: center;
+}
+.container{
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+
+}
+nav a:hover {
+  color:#e6823b ;
+}
+
+        header>h2 {
+            animation: fadeIn 5s;
+            color:#DAA520 ;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+        h2{
+            color: #DAA520;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color:white ;
+            font-weight: bold;
+        }
+      
+        
+        #first{
+            color:#066411 ;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+
+        .intro {
+            padding: 20px;
+            text-align: center;
+            
+
+        
+        }
+        .intro img{
+            border-radius: 5px;
+            box-shadow:2px 5px  2px 5px rgba(23, 23, 23, 0.1)
+        }
+ #container {
+            display: flex;
+            gap: 15px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(10, 205, 56, 0.1);
+            width: 200px;
+            border:solid green;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 10px;
+        }
+        .card p {
+            margin: 10px;
+            color: #555;
+        }
+    .card:hover  p{
+        color: white;
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+            background:#066411 ;
+            color: #F5F5DC;
+            
+        }
+
+.featured-city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: #555;
+    padding: 30px;
+    margin: 40px 0 0 0;
+    border-radius: 10px;
+    transition:  0.3s;
+    border: solid green;
+    background-image: url(Mazar.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    height: 500px;        
+}
+        
+h3{
+    color: #034a03;
+}
+.featured-city:hover{
+    background:#DAA520  ;
+    color: white;
+    border: solid white;        
+}
+.featured-city-text{
+    display: none;
+}
+.featured-city:hover .featured-city-text{
+    display: block;
+}
+.form-container{
+    text-align: center;
+}
+        .form-container input {
+            margin: 5px 0;
+            padding: 10px;
+            border: 2px solid green;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .form-container input:focus {
+            border-color: #e6823b;
+        }
+
+        .submit-button {
+            background:#034a03 ;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition:  0.3s;
+        }
+
+        .submit-button:hover {
+            background:#DAA520 ;
+            color: #F5F5DC;
+        }
+        footer {
+  color: green;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+#yourcity{
+    color: #066411;
+}
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  color: green;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color:#DAA520 ;
+}
+/* ==========================================================================
+   MOBILE-SPECIFIC LAYOUT ADJUSTMENTS (Add this to the END of your style.css)
+   ========================================================================== */
+
+/* Adjustments for screens up to 768px wide (typical for tablets in portrait and larger phones) */
+@media (max-width: 768px) {
+
+    /* --- Header and Navigation --- */
+    header nav#nav1 {
+        /* If nav links are inline, make them stack */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center stacked links */
+    }
+
+    header nav#nav1 a {
+        display: block; /* Make each link take full width available in its new flex container */
+        width: 80%; /* Or a percentage that looks good */
+        margin: 8px 0; /* Add some space between stacked links */
+        text-align: center; /* Center text within each link */
+    }
+
+    /* --- Main Image Caption --- */
+    .image-container .caption h1 {
+        /* Optionally reduce font size if it's too big for mobile, but only if it breaks layout */
+        /* font-size: 1.5rem; */ /* Example: Uncomment and adjust if needed */
+    }
+
+    /* --- Gallery Cards (#container) --- */
+    div#container {
+        display: flex; /* Ensure it's flex if not already */
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards if they don't take full width */
+    }
+
+    div#container .card {
+        width: 90%; /* Make cards take most of the width */
+        max-width: 400px; /* Optional: prevent cards from becoming too wide on larger "mobile" screens */
+        margin-left: auto;  /* For centering if width is less than 100% */
+        margin-right: auto; /* For centering if width is less than 100% */
+        margin-bottom: 20px; /* Space between stacked cards */
+        /* Any other layout adjustments specific to cards on mobile, e.g., internal padding */
+    }
+
+    /* --- Featured City Section --- */
+    section#city.featured-city {
+        /* If this section uses flexbox for side-by-side content on desktop, stack it */
+        /* For example, if it had a text div and an image div inside */
+        /* display: flex; */ /* Uncomment if it's a flex container */
+        /* flex-direction: column; */ /* Uncomment to stack children */
+        /* align-items: center; */ /* Uncomment to center children */
+    }
+
+    .featured-city-text {
+        /* If text is too wide, constrain it */
+        /* padding-left: 15px; */ /* Example */
+        /* padding-right: 15px; */ /* Example */
+    }
+
+
+    /* --- Form Container --- */
+    section#submit.form-container form {
+        /* Ensure form elements are easily usable */
+    }
+
+    section#submit.form-container input[type="text"],
+    section#submit.form-container .submit-button {
+        width: 100%; /* Make inputs and button take full width of the form */
+        margin-bottom: 10px; /* Add space below each input/button */
+    }
+    section#submit.form-container .submit-button {
+        margin-bottom: 0; /* No margin for the last element if it's the button */
+    }
+
+
+    /* --- General Adjustments --- */
+    /* If you have elements with fixed widths in pixels that break the layout,
+       try to make them percentage-based or use max-width for mobile. */
+    /* Example:
+    .some-fixed-width-element-on-desktop {
+        width: auto;
+        max-width: 100%;
+    }
+    */
+
+    /* Reduce large paddings or margins if they cause issues on small screens */
+    /* Example:
+    .section-with-large-padding {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    */
+}
+
+/* Optional: Further adjustments for very small screens (e.g., less than 480px) */
+@media (max-width: 480px) {
+    /* --- Header --- */
+    header h1 {
+        /* font-size: 1.8rem; */ /* Example: Further reduce main title if needed for layout */
+    }
+    header h2 {
+        /* font-size: 1rem; */ /* Example */
+    }
+
+    /* --- Gallery Cards --- */
+    div#container .card {
+        width: 95%; /* Cards can take even more width */
+    }
+
+    /* --- Image Caption --- */
+    .image-container .caption h1 {
+        /* font-size: 1.2rem; */ /* Example */
+    }
+
+    /* Add any other specific layout tweaks for very small screens */
+}
